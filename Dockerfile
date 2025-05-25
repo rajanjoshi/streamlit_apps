@@ -6,5 +6,5 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
-EXPOSE 8501
-CMD ["streamlit", "run", "app.py", "--server.port=8080", "--server.enableCORS=false"]
+EXPOSE 8080
+CMD ["streamlit", "run", "app.py", "--server.port=8080", "--server.enableCORS=false", "--server.enableXsrfProtection=false", "--server.headless=true"]
